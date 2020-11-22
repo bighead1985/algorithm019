@@ -35,7 +35,6 @@ public class Permute {
                 backtrack(list, nums, k - 1, path, used);
                 path.removeLast();
                 used[i] = false;
-
             }
         }
     }
