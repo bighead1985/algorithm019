@@ -1,19 +1,15 @@
 /**
- * Description:买卖股票最佳时机1
+ * Description:买卖股票最佳时机2
  * Date: 2020-11-25
  * Time: 6:22 PM
  */
-public class MaxProfit1 {
-    public int maxProfit(int prices[]) {
-        int minprice = Integer.MAX_VALUE;
-        int maxprofit = 0;
-        for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < minprice) {
-                minprice = prices[i];
-            } else if (prices[i] - minprice > maxprofit) {
-                maxprofit = prices[i] - minprice;
-            }
+public class MaxProfit2 {
+    public int maxProfit(int[] prices) {
+        int ans = 0;
+        int n = prices.length;
+        for (int i = 1; i < n; ++i) {
+            ans += Math.max(0, prices[i] - prices[i - 1]);
         }
-        return maxprofit;
+        return ans;
     }
 }
