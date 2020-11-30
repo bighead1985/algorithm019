@@ -77,5 +77,6 @@ public static int binary(int[] arr, int data) {
 - 有序
 - 单调
 - 有上下界
+- 可以通过索引访问元素
 
 
