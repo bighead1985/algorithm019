@@ -19,25 +19,34 @@ public class HasCycle2 {
     }
 
     public ListNode detectCycle(ListNode head) {
-        ListNode fast = head, slow = head;
-        //获取首次相遇时候，slow的位置
-        while(fast!= null && fast.next != null){
-            fast = fast.next.next;
+
+        if (head == null || head.next == null) {
+            return null;
+        }
+
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+
             slow = slow.next;
-            if(fast == slow){
+            fast = fast.next.next;
+
+            if (slow == fast) {
                 break;
             }
         }
-        //如果快指针走到尽头，没环
+
         if(fast == null || fast.next == null) {
             return null;
         }
-        //快指针重新出发，相遇位置就是入口位置
-        fast = head;
-        while(fast != slow){
-            fast = fast.next;
+        slow = head;
+        while(slow != fast){
             slow = slow.next;
+            fast = fast.next;
         }
+
         return slow;
+
     }
 }
