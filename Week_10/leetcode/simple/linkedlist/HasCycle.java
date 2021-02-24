@@ -1,7 +1,7 @@
 package leetcode.simple;
 
 /**
- * Description: 环形链表
+ * Description: 141. 环形链表
  * User: liqing@pluosi
  * Date: 2021-01-09
  * Time: 7:20 PM

@@ -1,12 +1,12 @@
 package leetcode.simple;
 
 /**
- * Description: 环形链表
+ * Description: 142. 环形链表 II
  * User: liqing@pluosi
  * Date: 2021-01-09
  * Time: 7:20 PM
  */
-public class HasCycle2 {
+public class DetectCycle {
 
     class ListNode {
         int val;

@@ -1,29 +1,15 @@
 package leetcode.simple;
 
+import leetcode.ListNode;
+
 /**
  * Description: 合并2个有序链表
+ * 迭代法
  * User: liqing@pluosi
  * Date: 2021-01-08
  * Time: 11:03 PM
  */
 public class MergeTwoLists {
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 

@@ -1,5 +1,7 @@
 package leetcode.simple;
 
+import leetcode.simple.linkedlist.ListNode;
+
 /**
  * Description:
  * User: liqing@pluosi
@@ -7,16 +9,6 @@ package leetcode.simple;
  * Time: 10:39 PM
  */
 public class GetKthFromEnd {
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 
     public ListNode getKthFromEnd(ListNode head, int k) {
 
