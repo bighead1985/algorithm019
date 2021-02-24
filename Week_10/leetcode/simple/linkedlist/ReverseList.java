@@ -1,4 +1,6 @@
-package leetcode.simple;
+package leetcode.simple.linkedlist;
+
+import leetcode.ListNode;
 
 /**
  * Description: 反转链表
@@ -8,15 +10,6 @@ package leetcode.simple;
  */
 public class ReverseList {
 
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 
 //    public ListNode reverseList(ListNode head) {
 //        ListNode prev = null;

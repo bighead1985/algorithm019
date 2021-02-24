@@ -1,5 +1,7 @@
-package leetcode.mid;
+package leetcode.mid.linkedlist;
 
+
+import leetcode.ListNode;
 
 /**
  * Description:
@@ -9,16 +11,6 @@ package leetcode.mid;
  */
 public class RotateRight {
 
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 
     /**
      * 总的解法就是寻找链表断开处

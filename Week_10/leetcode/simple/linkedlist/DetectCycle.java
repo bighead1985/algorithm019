@@ -1,4 +1,6 @@
-package leetcode.simple;
+package leetcode.simple.linkedlist;
+
+import leetcode.ListNode;
 
 /**
  * Description: 142. 环形链表 II
@@ -7,16 +9,6 @@ package leetcode.simple;
  * Time: 7:20 PM
  */
 public class DetectCycle {
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 
     public ListNode detectCycle(ListNode head) {
 

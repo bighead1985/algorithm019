@@ -4,37 +4,79 @@ import leetcode.ListNode;
 
 /**
  * Description: 反转链表II
+ * 递归法2
  * User: liqing@pluosi
  * Date: 2021-01-12
  * Time: 11:13 PM
  */
-public class ReverseBetween {
+public class ReverseBetweenII {
 
-    ListNode successor = null; // 后驱节点
-
-    // 反转以 head 为起点的 n 个节点，返回新的头结点
-    ListNode reverseN(ListNode head, int n) {
-        if (n == 1) {
-            // 记录第 n + 1 个节点
-            successor = head.next;
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
             return head;
         }
-        // 以 head.next 为起点，需要反转前 n - 1 个节点
-        ListNode last = reverseN(head.next, n - 1);
-
+        ListNode p = reverseList(head.next);
         head.next.next = head;
-        // 让反转之后的 head 节点和后面的节点连起来
-        head.next = successor;
-        return last;
+        head.next = null;
+        return p;
     }
 
-    ListNode reverseBetween(ListNode head, int m, int n) {
-        // base case
-        if (m == 1) {
-            return reverseN(head, n);
+    ListNode reverseBetween(ListNode head, int left, int right) {
+
+
+        /**
+         * 如果left==right ，则链表不需要做任何反转，直接返回
+         */
+        if (left == right) {
+            return head;
         }
-        // 前进到反转的起点触发 base case
-        head.next = reverseBetween(head.next, m - 1, n - 1);
-        return head;
+
+        ListNode preL = null;
+        ListNode nodeL = head;
+        ListNode nodeR = null;
+        ListNode rNext = null;
+
+
+        /**
+         * 开始遍历链表，同时放置各个上述需要的节点指针
+         */
+        int i = 1;
+        ListNode cur = head;
+        while (i <= right) {
+            if (i == left - 1) {
+                preL = cur;
+            }
+            if (i == left) {
+                nodeL = cur;
+            }
+            if (i == right) {
+                nodeR = cur;
+                rNext = cur.next;
+            }
+            cur = cur.next;
+            i++;
+        }
+
+
+        /**
+         * 切断链表的尾部,并反转指定的链表区间
+         */
+        if (null != nodeR) {
+            nodeR.next = null;
+        }
+        ListNode newHead = reverseList(nodeL);
+
+        /**
+         * 重新连接新的链表并返回
+         */
+        if (preL == null) {
+            nodeL.next = rNext;
+            return newHead;
+        } else {
+            preL.next = nodeR;
+            nodeL.next = rNext;
+            return head;
+        }
+
     }
 }

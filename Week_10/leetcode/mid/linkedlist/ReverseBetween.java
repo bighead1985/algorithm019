@@ -1,21 +1,15 @@
-package leetcode.mid;
+package leetcode.mid.linkedlist;
+
+import leetcode.ListNode;
 
 /**
  * Description: 反转链表II
+ * 递归法1
  * User: liqing@pluosi
  * Date: 2021-01-12
  * Time: 11:13 PM
  */
 public class ReverseBetween {
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     ListNode successor = null; // 后驱节点
 
@@ -34,7 +28,6 @@ public class ReverseBetween {
         head.next = successor;
         return last;
     }
-
 
     ListNode reverseBetween(ListNode head, int m, int n) {
         // base case

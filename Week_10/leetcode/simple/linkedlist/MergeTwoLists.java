@@ -1,4 +1,4 @@
-package leetcode.simple;
+package leetcode.simple.linkedlist;
 
 import leetcode.ListNode;
 
@@ -29,7 +29,6 @@ public class MergeTwoLists {
 
         cur.next = l1 == null ? l2 : l1;
         return dummy.next;
-
 
     }
 }

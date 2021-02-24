@@ -1,6 +1,6 @@
-package leetcode.simple;
+package leetcode.simple.linkedlist;
 
-import leetcode.simple.linkedlist.ListNode;
+import leetcode.ListNode;
 
 /**
  * Description:
