@@ -1,4 +1,6 @@
-package leetcode.mid;
+package leetcode.mid.linkedlist;
+
+import leetcode.ListNode;
 
 /**
  * Description: 排序链表
@@ -7,16 +9,6 @@ package leetcode.mid;
  * Time: 10:39 PM
  */
 public class SortList {
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) return head;

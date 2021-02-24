@@ -14,6 +14,7 @@ public class RotateRight {
 
     /**
      * 总的解法就是寻找链表断开处
+     *
      * @param head
      * @param k
      * @return
