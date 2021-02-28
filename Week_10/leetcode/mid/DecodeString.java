@@ -35,7 +35,6 @@ public class DecodeString {
          * 4）如果当前字符为']',则开始进行出栈处理，先对res进行重复连接，然后拼接上res栈里最近的一个元素
          */
         for (char ch : s.toCharArray()) {
-
             if (ch >= 'a' && ch <= 'z') {
                 res.append(ch);
             } else if (ch > '0' && ch <= '9') {

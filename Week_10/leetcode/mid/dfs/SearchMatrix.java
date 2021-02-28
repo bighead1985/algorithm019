@@ -1,4 +1,4 @@
-package leetcode.mid;
+package leetcode.mid.dfs;
 
 /**
  * Description: 74.搜索二维矩阵
